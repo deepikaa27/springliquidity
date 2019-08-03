@@ -2,9 +2,10 @@ package com.scb.guass.model;
 
 public class Accounts {
 	
+	
 	private Long accNo;
     private String currency;
-    private int balance;
+    private double balance;
     private int customerId;
     private int groupId;
 	public Long getAccNo() {
@@ -19,10 +20,10 @@ public class Accounts {
 	public void setCurrency(String currency) {
 		this.currency = currency;
 	}
-	public int getBalance() {
+	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(int balance) {
+	public void setBalance(double balance) {
 		this.balance = balance;
 	}
 	public int getCustomerId() {
@@ -36,6 +37,17 @@ public class Accounts {
 	}
 	public void setGroupId(int groupId) {
 		this.groupId = groupId;
+	}
+	public Accounts(Long accNo, String currency, double balance, int customerId, int groupId) {
+		super();
+		this.accNo = accNo;
+		this.currency = currency;
+		this.balance = balance;
+		this.customerId = customerId;
+		this.groupId = groupId;
+	}
+	public Accounts() {
+		super();
 	}
 	 	
 		

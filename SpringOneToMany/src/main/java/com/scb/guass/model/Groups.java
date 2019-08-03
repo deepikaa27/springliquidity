@@ -8,9 +8,10 @@ public class Groups {
 	private String groupName;
 	private String rateId;
 	private int settlementacc;
-	private int groupBalance;
+	private double groupBalance;
 	private int customerId;
-	
+	private double creditpercent;
+	private double debitpercent;
 	public int getGroupId() {
 		return groupId;
 	}
@@ -35,10 +36,10 @@ public class Groups {
 	public void setSettlementacc(int settlementacc) {
 		this.settlementacc = settlementacc;
 	}
-	public int getGroupBalance() {
+	public double getGroupBalance() {
 		return groupBalance;
 	}
-	public void setGroupBalance(int groupBalance) {
+	public void setGroupBalance(double groupBalance) {
 		this.groupBalance = groupBalance;
 	}
 	public int getCustomerId() {
@@ -47,25 +48,39 @@ public class Groups {
 	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
-	public List<Accounts> getAccounts() {
-		return accounts;
+	public double getCreditpercent() {
+		return creditpercent;
 	}
-	public void setAccounts(List<Accounts> accounts) {
-		this.accounts = accounts;
+	public void setCreditpercent(double creditpercent) {
+		this.creditpercent = creditpercent;
 	}
-	
-	public List<Accounts> getItems() {
-		return accounts;
+	public double getDebitpercent() {
+		return debitpercent;
 	}
-	public void setItems(List<Accounts> accounts) {
-		this.accounts = accounts;
+	public void setDebitpercent(double debitpercent) {
+		this.debitpercent = debitpercent;
 	}
-	
-	private List<Accounts> accounts = new ArrayList<Accounts>();
-	public void addItem(Accounts item) {
-		accounts.add(item);
+	public Groups(int groupId, String groupName, String rateId, int settlementacc, double groupBalance, int customerId,
+			double creditpercent, double debitpercent) {
+		super();
+		this.groupId = groupId;
+		this.groupName = groupName;
+		this.rateId = rateId;
+		this.settlementacc = settlementacc;
+		this.groupBalance = groupBalance;
+		this.customerId = customerId;
+		this.creditpercent = creditpercent;
+		this.debitpercent = debitpercent;
 	}
-
+	public Groups() {
+		super();
+	}
+	@Override
+	public String toString() {
+		return "Groups [groupId=" + groupId + ", groupName=" + groupName + ", rateId=" + rateId + ", settlementacc="
+				+ settlementacc + ", groupBalance=" + groupBalance + ", customerId=" + customerId + ", creditpercent="
+				+ creditpercent + ", debitpercent=" + debitpercent + "]";
+	}
 	
 
 }
